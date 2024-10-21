@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Streaming App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Music App</h2>
+        <div id="authStatus">Not logged in</div>
+        <button id="signupBtn"><i class="fas fa-user-plus"></i> Sign Up</button>
+        <button id="loginBtn"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <button id="uploadBtn" class="hidden"><i class="fas fa-upload"></i> Upload Music</button>
+        <button id="searchBtn" class="hidden"><i class="fas fa-search"></i> Search Music</button>
+        <button id="viewBtn" class="hidden"><i class="fas fa-list"></i> View My Music</button>
+        <button id="logoutBtn" class="hidden"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Music Streaming App</h1>
+        
+        <div id="signupSection" class="hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signupUsername" placeholder="Username">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button id="submitSignup"><i class="fas fa-user-check"></i> Sign Up</button>
+        </div>
+
+        <div id="loginSection" class="hidden">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button id="submitLogin"><i class="fas fa-lock-open"></i> Login</button>
+        </div>
+        
+        <div id="uploadSection" class="hidden">
+            <h2>Upload Music</h2>
+            <input type="text" id="titleInput" placeholder="Title">
+            <input type="text" id="artistInput" placeholder="Artist">
+            <input type="text" id="genreInput" placeholder="Genre">
+            <input type="file" id="audioInput" accept="audio/*">
+            <input type="file" id="coverInput" accept="image/*">
+            <button id="submitUpload"><i class="fas fa-upload"></i> Upload</button>
+        </div>
+        
+        <div id="searchSection" class="hidden">
+            <h2>Search Music</h2>
+            <input type="text" id="searchQuery" placeholder="Search...">
+            <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+            <div id="searchResults"></div>
+        </div>
+        
+        <div id="musicList" class="hidden">
+            <h2>Your Music</h2>
+            <ul id="musicUl"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
